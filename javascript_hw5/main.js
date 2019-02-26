@@ -40,7 +40,6 @@ let setUpToolTip = function(){
             let timeout;
             elem.addEventListener("mouseenter", function(e){
                 let that = this;
-                
                 timeout = setTimeout(function(){
                     displayToolTip(e, that);
                 }, 500);
