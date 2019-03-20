@@ -10,14 +10,12 @@
   </head>
   <body>
     <section>
-      <h1>You hungry? You need to cook?</h1>
+      <h1>You hungry? You need inspiration?</h1>
       <br />
       <form id="typeIngredients">
         <div>
-        <label for="typeIngredients"
-          >Type An Ingredient You Want To Cook With</label
-        >
-        <input type="text" id="item" />
+
+        <input type="text" placeholder= "Enter an Ingredient Here" id="item" />
         </div><br>
         <div>
         Vegetarian<input type="checkbox" id= "vegetarian"></input>
@@ -25,17 +23,24 @@
         Balanced Meal<input type="checkbox" id= "balanced"></input>
 
       </div><br>
-        <input type="submit" value="Submit"></input>
+        <input type="submit" id="submit" value="Submit"></input>
+        
       </form>
+      <br>
       
       <div id="errorMessage"></div>
       <br><br>
       <div id="recipeTitle"></div>
+      <h3 id="servings"></h3>
       <br>
+      <h2 id="ingredients">Ingredients</h2>
+      
       <img id="recipeImg">
       <br>
-      <ul id="recipe"></ul>
-    </section>
+      <div id="recipe"></div>
+      <input type="submit" action="" id="recipeLink" value="Go to Original Recipe"></input>
 
+    </section>
+<audio id="audio" src="backgroundMusic.mp3" loop= "loop"></audio>
   </body>
 </html>
