@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: hotPizza;
   background-color: aquamarine;
 }
 
@@ -14,7 +14,6 @@ section {
   margin: 0 auto;
   padding: 30px;
   border: none;
-  /* background-color: cadetblue; */
 }
 
 h1 {
@@ -30,6 +29,7 @@ h2 {
   font-family: hotPizza;
   color: black;
   font-weight: 100;
+  margin-left: 30px;
 }
 
 h3 {
@@ -40,12 +40,22 @@ h3 {
   font-weight: 100;
 }
 
+#subtitle {
+  text-align: center;
+  font-size: 16px;
+}
+
+#preferences {
+  text-align: left;
+  font-size: 15px;
+}
+
 #typeIngredients {
   font-size: 20px;
   text-align: left;
   color: black;
   width: 65%;
-  margin-left: 0;
+  /* margin-left: 30px; */
 }
 
 input[type="text"] {
@@ -71,6 +81,7 @@ input[type="submit"] {
   width: auto;
   height: 30px;
   display: none;
+  margin-left: 30px;
 }
 
 input[type="checkbox"] {
@@ -90,7 +101,7 @@ input[type="submit"]:hover {
   font-family: hotPizza;
   color: black;
   font-size: 20px;
-  margin-left: 5px;
+  margin-left: 30px;
 }
 
 #errorMessage {
@@ -121,6 +132,7 @@ input[type="submit"]:hover {
   float: right;
   border: none;
   display: none;
-  margin-right: -30px;
+  margin-right: 60px;
   border-radius: 15px;
+  /* padding-bottom: 30px; */
 }

@@ -8,7 +8,15 @@ const veganHealthLabel = "&health=vegan";
 const balancedHealthLabel = "&diet=balanced";
 
 window.onload = function() {
-  document.getElementById("audio").play();
+  //automatically play audio on page load
+  // document.getElementById("audio").play();
+
+  let playPromise = document.getElementById("audio").play();
+  if (playPromise) {
+    playPromise.catch(function(error) {
+      console.log(error);
+    });
+  }
 
   let submitted = document.getElementById("typeIngredients");
   let vegetarianValue = document.getElementById("vegetarian");
@@ -109,7 +117,7 @@ window.onload = function() {
         console.log(err);
         document.getElementById("errorMessage").innerHTML =
           "I'm sorry we don't have any options for " +
-          pressed.item.value +
+          submitted.item.value +
           ". Please try again";
       });
   };
