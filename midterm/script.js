@@ -113,9 +113,9 @@ window.onload = function() {
       .then(response => response.json())
       .then(json => {
         console.log(json);
-        console.log(randArrayItem);
 
         const recipe = json.hits[randArrayItem].recipe;
+        console.log(recipe);
 
         //print recipe title
         recipeTitle.style.display = "block";
@@ -127,7 +127,6 @@ window.onload = function() {
 
         //print out recipe line by line
         let recipeList = recipe.ingredientLines;
-        console.log(recipeList);
         let listItem = "";
         for (let i = 0; i < recipeList.length; i++) {
           let listNumber = i + 1 + ". ";
