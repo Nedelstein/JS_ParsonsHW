@@ -2,23 +2,17 @@ const edamamApi = "https://api.edamam.com/search?";
 const api_id = "&app_id=8aed0130";
 const api_key = "&app_key=10bf9207b3dc2e5353697f16d6db3510";
 const result_count = "&from=0&to=20";
-let url;
 const vegetarianHealthLabel = "&health=vegetarian";
 const veganHealthLabel = "&health=vegan";
 const peanutHealthLabel = "&health=peanut-free";
 const balancedHealthLabel = "&diet=balanced";
 
 window.onload = function() {
-  //automatically play audio on page load
+  //automatically play audio on page load (doesn't work anymore with new Chrome)
   document.getElementById("audio").play();
 
   let submitted = document.getElementById("typeIngredients");
-  let vegetarianValue = document.getElementById("vegetarian");
-  let veganValue = document.getElementById("vegan");
-  let balancedValue = document.getElementById("balanced");
-
-  let recipeUrl = document.getElementById("recipeLink");
-
+  const recipeUrl = document.getElementById("recipeLink");
   const ingredients = document.getElementById("ingredients");
   const recipeImg = document.getElementById("recipeImg");
   const numServings = document.getElementById("servings");
@@ -51,13 +45,18 @@ window.onload = function() {
             checkedValues += balancedHealthLabel;
             break;
         }
-        console.log(checkedValues);
+        // console.log(checkedValues);
       }
     });
     let url =
       edamamApi + ingredient + checkedValues + api_id + api_key + result_count;
 
-    //less efficient way of doing the above switch statements
+    //less efficient way of doing the above switch statements:
+
+    // let vegetarianValue = document.getElementById("vegetarian");
+    // let veganValue = document.getElementById("vegan");
+    // let balancedValue = document.getElementById("balanced");
+
     // if (veganValue.checked) {
     //   console.log("vegan");
     //   url =
